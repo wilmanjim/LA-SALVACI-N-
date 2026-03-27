@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Camino de Salvación y Liberación - Recibe a Jesucristo como tu Señor y Salvador y sé libre de toda atadura">
+<title>Salvación y Liberación | Evangelio Completo</title>
+
+<style>
+/* ═══════════════════════════════════════════════════════════════
+   VARIABLES - FONDO NEGRO + TEXTO BLANCO + LETRA GRANDE
+   ═══════════════════════════════════════════════════════════════ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --bg: #000000;
+  --bg-alt: #0a0a0a;
+  --bg-card: #111111;
+  --fg: #FFFFFF;
+  --fg-alt: #FFFFFF;
+  --muted: #CCCCCC;
+  --accent: #D4AF37;
+  --accent-bright: #FFD700;
+  --blood: #8B0000;
+  
+  --text-base: 22px;
+  --text-lg: 26px;
+  --text-xl: 32px;
+  --text-2xl: 40px;
+  --text-3xl: 52px;
+  
+  --space-sm: 12px;
+  --space-md: 20px;
+  --space-lg: 32px;
+  --space-xl: 48px;
+  --space-2xl: 72px;
+  --radius: 12px;
+}
+
+html{font-size:var(--text-base);scroll-behavior:smooth}
+
+body{
+  font-family:Georgia, 'Times New Roman', serif;
+  background:var(--bg);
+  color:var(--fg);
+  line-height:1.8;
+  min-height:100vh;
+}
+
+/* TIPOGRAFÍA */
+h1{font-size:var(--text-3xl);font-weight:700;margin-bottom:var(--space-lg);color:var(--accent-bright)}
+h2{font-size:var(--text-2xl);font-weight:700;margin-bottom:var(--space-md);color:var(--accent-bright)}
+h3{font-size:var(--text-xl);font-weight:600;margin-bottom:var(--space-md);color:var(--accent)}
+h4{font-size:var(--text-lg);font-weight:600;margin-bottom:var(--space-sm);color:var(--accent)}
+
+p{font-size:var(--text-base);margin-bottom:var(--space-md);color:var(--fg)}
+
+a{color:var(--accent-bright);text-decoration:underline;transition:all 0.3s}
+a:hover{color:var(--accent);text-decoration:none}
+
+strong{color:var(--accent-bright)}
+
+/* NAVEGACIÓN */
+.nav{
+  position:fixed;
+  top:0;left:0;right:0;
+  z-index:1000;
+  background:var(--bg-alt);
+  border-bottom:3px solid var(--accent);
+  padding:var(--space-md);
+}
+
+.nav-inner{
+  max-width:1200px;
+  margin:0 auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:var(--space-md);
+}
+
+.logo{font-size:var(--text-xl);font-weight:700;color:var(--accent-bright)}
+
+.nav-links{
+  display:flex;
+  gap:var(--space-md);
+  flex-wrap:wrap;
+  list-style:none;
+}
+
+.nav-links a{
+  font-size:var(--text-base);
+  padding:var(--space-sm) var(--space-md);
+  border:2px solid var(--accent);
+  border-radius:var(--radius);
+  color:var(--fg);
+  text-decoration:none;
+}
+
+.nav-links a:hover,.nav-links a:focus{
+  background:var(--accent);
+  color:var(--bg);
+}
+
+.mobile-toggle{
+  display:none;
+  background:var(--accent);
+  color:var(--bg);
+  border:none;
+  padding:var(--space-md);
+  font-size:var(--text-lg);
+  font-weight:700;
+  cursor:pointer;
+  border-radius:var(--radius);
+}
+
+@media(max-width:768px){
+  .nav-links{display:none}
+  .mobile-toggle{display:block}
+  .nav-links.active{display:flex;flex-direction:column;width:100%}
+}
+
+/* CONTENIDO */
+.container{max-width:1000px;margin:0 auto;padding:0 var(--space-lg)}
+
+.section{
+  padding:var(--space-2xl) var(--space-lg);
+  border-bottom:2px solid #333;
+}
+
+.section:first-of-type{padding-top:calc(var(--space-2xl) + 100px)}
+
+/* VERSÍCULOS */
+.verse{
+  background:#1a1a1a;
+  border-left:6px solid var(--accent);
+  padding:var(--space-lg);
+  margin:var(--space-lg) 0;
+  font-style:italic;
+}
+
+.verse cite{
+  display:block;
+  margin-top:var(--space-md);
+  font-style:normal;
+  font-weight:700;
+  color:var(--accent);
+}
+
+/* BOTONES */
+.btn{
+  display:inline-block;
+  padding:var(--space-md) var(--space-lg);
+  font-size:var(--text-lg);
+  font-weight:700;
+  border:3px solid var(--accent);
+  background:transparent;
+  color:var(--fg);
+  cursor:pointer;
+  border-radius:var(--radius);
+  margin:var(--space-sm);
+  transition:all 0.3s;
+  text-decoration:none;
+}
+
+.btn:hover,.btn:focus{
+  background:var(--accent);
+  color:var(--bg);
+}
+
+.btn-primary{background:var(--accent);color:var(--bg)}
+.btn-primary:hover{background:var(--accent-bright)}
+
+.btn-warning{
+  background:var(--blood);
+  border-color:var(--blood);
+  color:var(--fg);
+}
+
+/* CARDS */
+.card{
+  background:var(--bg-card);
+  border:2px solid #333;
+  padding:var(--space-lg);
+  margin:var(--space-md) 0;
+  border-radius:var(--radius);
+}
+
+.card-accent{border-color:var(--accent)}
+
+/* PASOS */
+.step{
+  display:flex;
+  gap:var(--space-lg);
+  align-items:flex-start;
+  margin:var(--space-lg) 0;
+  padding:var(--space-lg);
+  border:2px solid #333;
+  border-radius:var(--radius);
+}
+
+.step-number{
+  font-size:var(--text-3xl);
+  font-weight:700;
+  min-width:60px;
+  color:var(--accent-bright);
+}
+
+/* LIBERACIÓN - ESPECIAL */
+.warning-box{
+  background:#1a0a0a;
+  border:3px solid var(--blood);
+  padding:var(--space-xl);
+  margin:var(--space-lg) 0;
+  border-radius:var(--radius);
+}
+
+.warning-box h3{color:#FF6B6B}
+
+.liberation-step{
+  background:var(--bg-card);
+  border-left:6px solid var(--accent);
+  padding:var(--space-lg);
+  margin:var(--space-md) 0;
+  border-radius:var(--radius);
+}
+
+.liberation-step h4{margin-bottom:var(--space-sm)}
+
+/* ORACIÓN */
+.prayer-box{
+  background:var(--bg-card);
+  border:4px solid var(--accent);
+  padding:var(--space-xl);
+  border-radius:var(--radius);
+}
+
+.prayer-text{
+  font-size:var(--text-lg);
+  line-height:2;
+  color:var(--fg);
+}
+
+/* PREGUNTAS */
+.question{
+  background:var(--bg-card);
+  border:2px solid #333;
+  margin:var(--space-md) 0;
+  border-radius:var(--radius);
+}
+
+.question-header{
+  padding:var(--space-lg);
+  cursor:pointer;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  color:var(--fg);
+}
+
+.question-header:hover{background:#1a1a1a;color:var(--accent-bright)}
+.question-answer{padding:0 var(--space-lg) var(--space-lg);display:none;color:var(--muted)}
+.question.open .question-answer{display:block}
+
+/* TESTIMONIOS */
+.testimonio{
+  background:var(--bg-card);
+  border:2px solid #333;
+  padding:var(--space-lg);
+  margin:var(--space-md) 0;
+  border-radius:var(--radius);
+}
+
+.testimonio-text{font-style:italic}
+.testimonio-author{margin-top:var(--space-md);color:var(--accent)}
+
+/* REPRODUCTOR AUDIO */
+.audio-player{
+  position:fixed;
+  bottom:0;left:0;right:0;
+  z-index:1000;
+  background:var(--bg-alt);
+  border-top:4px solid var(--accent);
+  padding:var(--space-md);
+  display:flex;
+  align-items:center;
+  gap:var(--space-md);
+  flex-wrap:wrap;
+}
+
+.audio-player button{
+  background:var(--accent);
+  color:var(--bg);
+  border:none;
+  padding:var(--space-md) var(--space-lg);
+  font-size:var(--text-lg);
+  font-weight:700;
+  cursor:pointer;
+  border-radius:var(--radius);
+  min-width:100px;
+}
+
+.audio-player button:hover{background:var(--accent-bright)}
+
+.progress-bar{
+  flex:1;
+  height:30px;
+  background:#1a1a1a;
+  border:2px solid var(--accent);
+  border-radius:var(--radius);
+  cursor:pointer;
+  min-width:200px;
+}
+
+.progress-fill{height:100%;background:var(--accent);width:0%;transition:width 0.1s}
+.audio-text{font-size:var(--text-base);color:var(--fg);min-width:150px}
+
+/* CONTROLES ACCESIBILIDAD */
+.controls{
+  position:fixed;
+  top:100px;
+  right:var(--space-md);
+  z-index:999;
+  display:flex;
+  flex-direction:column;
+  gap:var(--space-sm);
+}
+
+.controls button{
+  background:#1a1a1a;
+  color:var(--fg);
+  border:2px solid var(--accent);
+  padding:var(--space-md);
+  font-size:var(--text-base);
+  font-weight:700;
+  cursor:pointer;
+  border-radius:var(--radius);
+}
+
+.controls button:hover{background:var(--accent);color:var(--bg)}
+
+/* FOOTER */
+.footer{
+  padding:var(--space-xl);
+  text-align:center;
+  border-top:3px solid var(--accent);
+  margin-bottom:100px;
+}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+  :root{
+    --text-base: 20px;
+    --text-lg: 24px;
+    --text-xl: 28px;
+    --text-2xl: 36px;
+    --text-3xl: 44px;
+  }
+  .step{flex-direction:column}
+  .audio-player{flex-direction:column;text-align:center}
+  .controls{position:static;flex-direction:row;flex-wrap:wrap;justify-content:center;margin:var(--space-md)}
+}
+
+.section:target{animation:highlight 2s}
+@keyframes highlight{0%,100%{background:transparent}50%{background:#1a1a1a}}
+:focus{outline:3px solid var(--accent-bright);outline-offset:3px}
+</style>
+</head>
+<body>
+
+<!-- NAVEGACIÓN -->
+<nav class="nav" role="navigation">
+  <div class="nav-inner">
+    <div class="logo">✛ SALVACIÓN Y LIBERACIÓN</div>
+    
+    <button class="mobile-toggle" onclick="toggleMenu()">☰ MENÚ</button>
+    
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#inicio">INICIO</a></li>
+      <li><a href="#salvacion">SALVACIÓN</a></li>
+      <li><a href="#liberacion">LIBERACIÓN</a></li>
+      <li><a href="#oracion">ORACIÓN</a></li>
+      <li><a href="#fundamentos">FUNDAMENTOS</a></li>
+      <li><a href="#preguntas">PREGUNTAS</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- CONTROLES ACCESIBILIDAD -->
+<div class="controls">
+  <button onclick="toggleSize()">A+ AUMENTAR</button>
+  <button onclick="toggleContrast()">◐ FONDO CLARO</button>
+  <button onclick="resetStyles()">↺ RESTABLECER</button>
+</div>
+
+<main>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     INICIO
+     ═══════════════════════════════════════════════════════════════ -->
+<section id="inicio" class="section">
+  <div class="container">
+    <h1>DIOS TE AMA<br>Y QUIERE SALVARTE Y LIBERARTE</h1>
+    
+    <p>
+      La Biblia dice: <strong>"Porque de tal manera amó Dios al mundo, que ha dado 
+      a su Hijo unigénito, para que todo aquel que en él cree, no se pierda, 
+      mas tenga vida eterna."</strong> (Juan 3:16)
+    </p>
+    
+    <div class="verse">
+      <p>
+        "Si el Hijo os libertare, seréis verdaderamente libres."
+      </p>
+      <cite>— Juan 8:36</cite>
+    </div>
+    
+    <p>
+      Quizás sientes que tu vida no tiene sentido. Quizás estás atrapado en 
+      ataduras que no puedes romper. Quizás has buscado satisfacción en cosas 
+      que no te han llenado.
+    </p>
+    
+    <p>
+      <strong>Dios tiene un plan para tu vida:</strong> Salvación para tu alma 
+      y liberación de toda atadura que te oprime.
+    </p>
+    
+    <a href="#salvacion" class="btn btn-primary">VER EL PLAN DE SALVACIÓN</a>
+    <a href="#liberacion" class="btn">NECESITO LIBERACIÓN</a>
+    <a href="#oracion" class="btn">ORAR AHORA</a>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     PLAN DE SALVACIÓN
+     ═══════════════════════════════════════════════════════════════ -->
+<section id="salvacion" class="section">
+  <div class="container">
+    <h2>EL CAMINO DE SALVACIÓN</h2>
+    
+    <p>
+      La Biblia enseña claramente cómo podemos ser salvos y recibir vida eterna.
+    </p>
+    
+    <div class="step">
+      <div class="step-number">1</div>
+      <div class="step-content">
+        <h3>RECONOCER TU NECESIDAD</h3>
+        <p>
+          <strong>"Por cuanto todos pecaron, y están destituidos de la gloria de Dios."</strong> 
+          (Romanos 3:23)
+        </p>
+        <p>
+          Debemos reconocer que somos pecadores y necesitamos un Salvador. 
+          El pecado nos separa de Dios.
+        </p>
+      </div>
+    </div>
+    
+    <div class="step">
+      <div class="step-number">2</div>
+      <div class="step-content">
+        <h3>ARREPENTIMIENTO</h3>
+        <p>
+          <strong>"Arrepentíos y convertíos, para que sean borrados vuestros pecados."</strong> 
+          (Hechos 3:19)
+        </p>
+        <p>
+          El arrepentimiento significa cambiar de dirección, abandonar el pecado 
+          y volverse hacia Dios con todo el corazón.
+        </p>
+      </div>
+    </div>
+    
+    <div class="step">
+      <div class="step-number">3</div>
+      <div class="step-content">
+        <h3>CREER EN JESUCRISTO</h3>
+        <p>
+          <strong>"Cree en el Señor Jesucristo, y serás salvo."</strong> (Hechos 16:31)
+        </p>
+        <p>
+          Creer que Jesús es el Hijo de Dios, que murió en la cruz por nuestros 
+          pecados y resucitó al tercer día.
+        </p>
+      </div>
+    </div>
+    
+    <div class="step">
+      <div class="step-number">4</div>
+      <div class="step-content">
+        <h3>RECIBIR A CRISTO</h3>
+        <p>
+          <strong>"Mas a todos los que le recibieron... les dio potestad de ser 
+          hechos hijos de Dios."</strong> (Juan 1:12)
+        </p>
+        <p>
+          Invitar a Jesús a entrar en tu corazón y ser el Señor de tu vida.
+        </p>
+      </div>
+    </div>
+    
+    <div class="step">
+      <div class="step-number">5</div>
+      <div class="step-content">
+        <h3>CONFESAR CON LA BOCA</h3>
+        <p>
+          <strong>"Si confesares con tu boca que Jesús es el Señor... serás salvo."</strong> 
+          (Romanos 10:9)
+        </p>
+        <p>
+          La confesión pública de nuestra fe es importante.
+        </p>
+      </div>
+    </div>
+    
+    <div class="step">
+      <div class="step-number">6</div>
+      <div class="step-content">
+        <h3>BAUTISMO EN AGUA</h3>
+        <p>
+          <strong>"El que creyere y fuere bautizado, será salvo."</strong> (Marcos 16:16)
+        </p>
+        <p>
+          El bautismo simboliza nuestra muerte al pecado y resurrección a una 
+          nueva vida en Cristo.
+        </p>
+      </div>
+    </div>
+    
+    <div class="verse">
+      <p>
+        "Porque por gracia sois salvos por medio de la fe; y esto no de vosotros, 
+        pues es don de Dios; no por obras, para que nadie se gloríe."
+      </p>
+      <cite>— Efesios 2:8-9</cite>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     LIBERACIÓN
+     ═══════════════════════════════════════════════════════════════ -->
+<section id="liberacion" class="section">
+  <div class="container">
+    <h2>LIBERACIÓN EN CRISTO</h2>
+    
+    <p>
+      La salvación incluye liberación. Cuando recibimos a Cristo, somos liberados 
+      del poder del pecado, de las ataduras espirituales y de toda obra del diablo.
+    </p>
+    
+    <div class="verse">
+      <p>
+        "El que practica el pecado es del diablo; porque el diablo peca desde 
+        el principio. Para esto apareció el Hijo de Dios, para deshacer las 
+        obras del diablo."
+      </p>
+      <cite>— 1 Juan 3:8</cite>
+    </div>
+    
+    <h3 style="margin-top:var(--space-xl)">¿DE QUÉ NOS LIBERA CRISTO?</h3>
+    
+    <div class="liberation-step">
+      <h4>1. LIBERACIÓN DEL PECADO</h4>
+      <p>
+        <strong>"Y libertados del pecado, fuisteis hechos siervos de la justicia."</strong> 
+        (Romanos 6:18)
+      </p>
+      <p>
+        El pecado es una esclavitud. Cristo rompe las cadenas del pecado y 
+        nos da poder para vivir en santidad.
+      </p>
+    </div>
+    
+    <div class="liberation-step">
+      <h4>2. LIBERACIÓN DE ATADURAS ESPIRITUALES</h4>
+      <p>
+        <strong>"Estad, pues, firmes en la libertad con que Cristo nos hizo libres, 
+        y no estéis otra vez sujetos al yugo de servidumbre."</strong> (Gálatas 5:1)
+      </p>
+      <p>
+        Las ataduras pueden ser: adicciones, vicios, pensamientos obsesivos, 
+        miedos, patrones destructivos. Cristo puede romper toda atadura.
+      </p>
+    </div>
+    
+    <div class="liberation-step">
+      <h4>3. LIBERACIÓN DE MALDICIONES GENERACIONALES</h4>
+      <p>
+        <strong>"Cristo nos redimió de la maldición de la ley, hecho por 
+        nosotros maldición."</strong> (Gálatas 3:13)
+      </p>
+      <p>
+        Las maldiciones pueden pasar de generación en generación. La sangre de 
+        Cristo tiene poder para romper toda maldición.
+      </p>
+    </div>
+    
+    <div class="liberation-step">
+      <h4>4. LIBERACIÓN DE LA OPRESIÓN DEMONÍACA</h4>
+      <p>
+        <strong>"He aquí les doy potestad de hollar serpientes y escorpiones, 
+        y sobre toda fuerza del enemigo."</strong> (Lucas 10:19)
+      </p>
+      <p>
+        Los demonias pueden oprimir, atormentar y esclavizar. Cristo nos da 
+        autoridad sobre todo poder del enemigo.
+      </p>
+    </div>
+    
+    <!-- ADVERTENCIA -->
+    <div class="warning-box">
+      <h3>⚠️ ADVERTENCIA IMPORTANTE</h3>
+      
+      <p>
+        <strong>Si alguien te pide relaciones sexuales como parte de un "trabajo 
+        espiritual", eso es un abuso.</strong> No es de Dios. Denúncialo.
+      </p>
+      
+      <p>
+        <strong>Si recibiste objetos de alguien y ahora sientes una conexión 
+        obsesiva con esa persona, puede haber una atadura espiritual.</strong>
+      </p>
+      
+      <p>
+        <strong>Si te alejaron de tu familia y de tu fe por influencia de 
+        alguien, eso es manipulación espiritual.</strong>
+      </p>
+      
+      <p>
+        Cristo puede liberarte de todo esto. No tienes que vivir en esclavitud.
+      </p>
+    </div>
+    
+    <h3 style="margin-top:var(--space-xl)">¿CÓMO RECIBIR LIBERACIÓN?</h3>
+    
+    <div class="step">
+      <div class="step-number">1</div>
+      <div class="step-content">
+        <h3>CONFESIÓN Y ARREPENTIMIENTO</h3>
+        <p>
+          Confiesa tus pecados a Dios. Arrepiéntete de corazón. 
+          <strong>"Si confesamos nuestros pecados, él es fiel y justo para 
+          perdonar."</strong> (1 Juan 1:9)
+        </p>
+      </div>
+    </div>
+    
+    <div class="step">
+      <div class="step-number">2</div>
+      <div class="step-content">
+        <h3>RENUNCIAR A PACTOS OSCUROS</h3>
+        <p>
+          Si hiciste pactos, juramentos o compromisos con prácticas ocultistas, 
+          renuncia a ellos en voz alta. Rompe toda conexión espiritual.
+        </p>
+      </div>
+    </div>
+    
+    <div class="step">
+      <div class="step-number">3</div>
+      <div class="step-content">
+        <h3>DESTRUIR OBJETOS DE BRUJERÍA</h3>
+        <p>
+          Si tienes objetos que te dieron para "protección", "suerte" o 
+          "amor", destrúyelos. No los guardes. 
+          <strong>Los objetos pueden ser portadores de maldición.</strong>
+        </p>
+      </div>
+    </div>
+    
+    <div class="step">
+      <div class="step-number">4</div>
+      <div class="step-content">
+        <h3>CORTAR TODO CONTACTO</h3>
+        <p>
+          Si la persona que te ató sigue en tu vida, es difícil mantener la 
+          liberación. Corta comunicación, bloquea números, elimina contactos.
+        </p>
+      </div>
+    </div>
+    
+    <div class="step">
+      <div class="step-number">5</div>
+      <div class="step-content">
+        <h3>LA SANGRE DE CRISTO</h3>
+        <p>
+          <strong>"Y la sangre de Jesucristo su Hijo nos limpia de todo pecado."</strong> 
+          (1 Juan 1:7)
+        </p>
+        <p>
+          La sangre de Jesús tiene poder para limpiarte, sanarte y liberarte. 
+          Declara el poder de Su sangre sobre tu vida.
+        </p>
+      </div>
+    </div>
+    
+    <div class="step">
+      <div class="step-number">6</div>
+      <div class="step-content">
+        <h3>LLENAR EL VACÍO CON LA PALABRA</h3>
+        <p>
+          <strong>"Cuando el espíritu inmundo sale del hombre, anda por lugares 
+          secos... y vuelve y halla la casa barrida y adornada. Entonces va 
+          y toma otros siete espíritus peores..."</strong> (Mateo 12:44-45)
+        </p>
+        <p>
+          Después de la liberación, llena tu vida con la Palabra de Dios, 
+          oración y comunidad cristiana. No dejes tu corazón vacío.
+        </p>
+      </div>
+    </div>
+    
+    <div class="verse">
+      <p>
+        "Conoceréis la verdad, y la verdad os hará libres."
+      </p>
+      <cite>— Juan 8:32</cite>
+    </div>
+    
+    <div style="text-align:center;margin-top:var(--space-xl)">
+      <a href="#oracion" class="btn btn-primary">ORAR POR LIBERACIÓN</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     ORACIÓN DE SALVACIÓN Y LIBERACIÓN
+     ═══════════════════════════════════════════════════════════════ -->
+<section id="oracion" class="section">
+  <div class="container">
+    <h2>ORACIÓN DE SALVACIÓN Y LIBERACIÓN</h2>
+    
+    <p>
+      Si deseas recibir a Jesucristo y ser libre de toda atadura, haz esta 
+      oración con fe, desde lo profundo de tu corazón.
+    </p>
+    
+    <div class="prayer-box">
+      <p class="prayer-text">
+        <strong>Padre Celestial,</strong>
+      </p>
+      <p class="prayer-text">
+        Vengo a Ti reconociendo que soy un pecador y que necesito Tu perdón. 
+        Me arrepiento de todos mis pecados y decido abandonarlos hoy.
+      </p>
+      <p class="prayer-text">
+        Creo que Jesucristo es Tu Hijo, que murió en la cruz por mis pecados 
+        y que resucitó de entre los muertos al tercer día.
+      </p>
+      <p class="prayer-text">
+        Te pido que me perdones y me limpies con la sangre preciosa de Jesús. 
+        Invito a Jesús a entrar en mi corazón y a ser el Señor y Salvador de mi vida.
+      </p>
+      <p class="prayer-text">
+        Renuncio a todo pacto, juramento y compromiso que haya hecho con el 
+        enemigo. Renuncio a toda práctica ocultista, brujería y espiritismo. 
+        Rompo toda atadura en el nombre de Jesús.
+      </p>
+      <p class="prayer-text">
+        Declaro que soy libre por la sangre de Cristo. Soy hijo de Dios, 
+        comprado con precio, y el enemigo no tiene más derecho sobre mí.
+      </p>
+      <p class="prayer-text">
+        Gracias por Tu amor, Tu gracia y Tu liberación. Desde este día, 
+        te perteneceré y viviré para Ti.
+      </p>
+      <p class="prayer-text">
+        <strong>En el nombre de Jesús, Amén.</strong>
+      </p>
+    </div>
+    
+    <button class="btn btn-primary" onclick="prayed()">🙏 HE ORADO CON FE</button>
+    
+    <div id="prayer-response" style="display:none; margin-top:var(--space-lg); padding:var(--space-lg); background:#1a1a1a; border-radius:var(--radius); border:2px solid var(--accent);">
+      <h3>¡DIOS TE BENDIGA!</h3>
+      <p>
+        Si has hecho esta oración con fe, ¡ahora eres un hijo de Dios y has 
+        sido liberado por el poder de la sangre de Cristo!
+      </p>
+      <p><strong>Próximos pasos:</strong></p>
+      <p>1. Busca una iglesia cristiana bíblica</p>
+      <p>2. Lee la Biblia (empieza con Juan)</p>
+      <p>3. Ora todos los días</p>
+      <p>4. Destruye cualquier objeto de brujería que tengas</p>
+      <p>5. Corta contacto con personas que te ataron espiritualmente</p>
+    </div>
+    
+    <div class="verse">
+      <p>"Porque todo aquel que invocare el nombre del Señor, será salvo."</p>
+      <cite>— Romanos 10:13</cite>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     FUNDAMENTOS BÍBLICOS
+     ═══════════════════════════════════════════════════════════════ -->
+<section id="fundamentos" class="section">
+  <div class="container">
+    <h2>FUNDAMENTOS DE LA FE</h2>
+    
+    <div class="card">
+      <h3>📖 LA BIBLIA ES LA PALABRA DE DIOS</h3>
+      <p>
+        <strong>"Toda la Escritura es inspirada por Dios y útil para enseñar, 
+        para redargüir, para corregir, para instruir en justicia."</strong> 
+        (2 Timoteo 3:16)
+      </p>
+    </div>
+    
+    <div class="card">
+      <h3>👑 UN SOLO DIOS EN TRES PERSONAS</h3>
+      <p>
+        <strong>"Porque tres son los que dan testimonio en el cielo: el Padre, 
+        el Verbo y el Espíritu Santo."</strong> (1 Juan 5:7)
+      </p>
+    </div>
+    
+    <div class="card">
+      <h3>✝️ LA DEIDAD DE JESUCRISTO</h3>
+      <p>
+        <strong>"En el principio era el Verbo, y el Verbo era con Dios, 
+        y el Verbo era Dios."</strong> (Juan 1:1)
+      </p>
+    </div>
+    
+    <div class="card">
+      <h3>🩸 LA EXPIACIÓN POR LA SANGRE</h3>
+      <p>
+        <strong>"Sin derramamiento de sangre no se hace remisión."</strong> (Hebreos 9:22)
+      </p>
+      <p>La muerte de Cristo es el único sacrificio suficiente por nuestros pecados.</p>
+    </div>
+    
+    <div class="card">
+      <h3>⚡ LA RESURRECCIÓN</h3>
+      <p>
+        <strong>"Y si Cristo no resucitó, vuestra fe es vana."</strong> (1 Corintios 15:17)
+      </p>
+      <p>Jesús resucitó físicamente. ¡Él vive!</p>
+    </div>
+    
+    <div class="card">
+      <h3>🕊️ EL NUEVO NACIMIENTO</h3>
+      <p>
+        <strong>"El que no naciere de nuevo, no puede ver el reino de Dios."</strong> 
+        (Juan 3:3)
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     PREGUNTAS FRECUENTES
+     ═══════════════════════════════════════════════════════════════ -->
+<section id="preguntas" class="section">
+  <div class="container">
+    <h2>PREGUNTAS FRECUENTES</h2>
+    
+    <div class="question" onclick="toggleQuestion(this)">
+      <div class="question-header">
+        <span>¿Puedo perder mi salvación?</span>
+        <span>+</span>
+      </div>
+      <div class="question-answer">
+        <p>Jesús dijo: "Mis ovejas oyen mi voz... y yo les doy vida eterna; 
+        y no perecerán jamás." (Juan 10:28). La perseverancia en la fe es 
+        evidencia de una salvación genuina.</p>
+      </div>
+    </div>
+    
+    <div class="question" onclick="toggleQuestion(this)">
+      <div class="question-header">
+        <span>¿Cómo sé si tengo una atadura espiritual?</span>
+        <span>+</span>
+      </div>
+      <div class="question-answer">
+        <p>Señales de atadura: No puedes dejar un pecado aunque lo intentes, 
+        pensamientos obsesivos hacia alguien, objetos que "no puedes tirar", 
+        conductas repetitivas que te dañan, miedo intenso sin razón aparente.</p>
+      </div>
+    </div>
+    
+    <div class="question" onclick="toggleQuestion(this)">
+      <div class="question-header">
+        <span>¿Qué hago si alguien me hizo brujería?</span>
+        <span>+</span>
+      </div>
+      <div class="question-answer">
+        <p>1. Arrepiéntete de cualquier participación. 2. Renuncia en voz alta 
+        a todo pacto. 3. Destruye cualquier objeto que te dieron. 4. Ora 
+        pidiendo la sangre de Cristo. 5. Busca ayuda pastoral.</p>
+      </div>
+    </div>
+    
+    <div class="question" onclick="toggleQuestion(this)">
+      <div class="question-header">
+        <span>¿Los objetos pueden traer maldición?</span>
+        <span>+</span>
+      </div>
+      <div class="question-answer">
+        <p>Sí. En Hechos 19:19, los nuevos creyentes quemaron sus libros de 
+        magia. Los objetos usados en brujería pueden ser portadores de 
+        influencia espiritual negativa. Destruyelos.</p>
+      </div>
+    </div>
+    
+    <div class="question" onclick="toggleQuestion(this)">
+      <div class="question-header">
+        <span>¿Qué hago después de ser liberado?</span>
+        <span>+</span>
+      </div>
+      <div class="question-answer">
+        <p>1. Llena tu vida con la Palabra de Dios. 2. Ora constantemente. 
+        3. Busca una iglesia. 4. Rodéate de creyentes maduros. 
+        5. No vuelvas a las prácticas que te ataban.</p>
+      </div>
+    </div>
+    
+    <div class="question" onclick="toggleQuestion(this)">
+      <div class="question-header">
+        <span>¿Funcionan otras religiones?</span>
+        <span>+</span>
+      </div>
+      <div class="question-answer">
+        <p>Jesús dijo: "Yo soy el camino, y la verdad, y la vida; nadie viene 
+        al Padre, sino por mí." (Juan 14:6). Solo en Cristo hay salvación 
+        y verdadera liberación.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <h3>HOY ES EL DÍA DE SALVACIÓN</h3>
+  <p>"He aquí ahora el tiempo aceptable; he aquí ahora el día de salvación." (2 Corintios 6:2)</p>
+  <p>No esperes más. Dios te está llamando ahora mismo.</p>
+  <a href="#oracion" class="btn btn-primary">ORAR AHORA</a>
+  <p style="margin-top:var(--space-lg); font-style:normal; color:var(--muted);">
+    Si eres víctima de abuso, busca ayuda profesional y denuncia a las autoridades.
+  </p>
+</footer>
+
+<!-- REPRODUCTOR AUDIO -->
+<div class="audio-player">
+  <button id="playBtn" onclick="toggleAudio()">▶ REPRODUCIR</button>
+  <div class="progress-bar" onclick="seekAudio(event)">
+    <div class="progress-fill" id="progress"></div>
+  </div>
+  <span class="audio-text" id="audioStatus">Listo para reproducir</span>
+</div>
+
+<script>
+// ═══════════════════════════════════════════════════════════════
+// TEXTO PARA NARRAR
+// ═══════════════════════════════════════════════════════════════
+const NARRATION_TEXT = `
+Salvación y Liberación. Un mensaje de esperanza para tu vida.
+
+Dios te ama y quiere salvarte y liberarte.
+
+La Biblia dice: "Porque de tal manera amó Dios al mundo, que ha dado a su Hijo unigénito, para que todo aquel que en él cree, no se pierda, mas tenga vida eterna." Juan 3, versículo 16.
+
+"Si el Hijo os libertare, seréis verdaderamente libres." Juan 8, versículo 36.
+
+Quizás sientes que tu vida no tiene sentido. Quizás estás atrapado en ataduras que no puedes romper. Dios tiene un plan para tu vida: Salvación para tu alma y liberación de toda atadura que te oprime.
+
+El Camino de Salvación.
+
+Paso uno: Reconocer tu necesidad. "Por cuanto todos pecaron, y están destituidos de la gloria de Dios." Romanos 3, versículo 23.
+
+Paso dos: Arrepentimiento. "Arrepentíos y convertíos, para que sean borrados vuestros pecados." Hechos 3, versículo 19.
+
+Paso tres: Creer en Jesucristo. "Cree en el Señor Jesucristo, y serás salvo." Hechos 16, versículo 31.
+
+Paso cuatro: Recibir a Cristo. "Mas a todos los que le recibieron, les dio potestad de ser hechos hijos de Dios." Juan 1, versículo 12.
+
+Paso cinco: Confesar con la boca. "Si confesares con tu boca que Jesús es el Señor, serás salvo." Romanos 10, versículo 9.
+
+Paso seis: Bautismo en agua. "El que creyere y fuere bautizado, será salvo." Marcos 16, versículo 16.
+
+Liberación en Cristo.
+
+La salvación incluye liberación. Cuando recibimos a Cristo, somos liberados del poder del pecado, de las ataduras espirituales y de toda obra del diablo.
+
+"El que practica el pecado es del diablo. Para esto apareció el Hijo de Dios, para deshacer las obras del diablo." Primera de Juan 3, versículo 8.
+
+¿De qué nos libera Cristo?
+
+Liberación del pecado. "Y libertados del pecado, fuisteis hechos siervos de la justicia." Romanos 6, versículo 18.
+
+Liberación de ataduras espirituales. "Estad firmes en la libertad con que Cristo nos hizo libres." Gálatas 5, versículo 1.
+
+Liberación de maldiciones generacionales. "Cristo nos redimió de la maldición de la ley." Gálatas 3, versículo 13.
+
+Liberación de la opresión demoníaca. "He aquí les doy potestad sobre toda fuerza del enemigo." Lucas 10, versículo 19.
+
+Advertencia importante:
+
+Si alguien te pide relaciones sexuales como parte de un trabajo espiritual, eso es un abuso. No es de Dios. Denúncialo.
+
+Si recibiste objetos de alguien y ahora sientes una conexión obsesiva con esa persona, puede haber una atadura espiritual.
+
+Si te alejaron de tu familia y de tu fe por influencia de alguien, eso es manipulación espiritual.
+
+Cristo puede liberarte de todo esto.
+
+¿Cómo recibir liberación?
+
+Primero: Confesión y arrepentimiento. Confiesa tus pecados a Dios.
+
+Segundo: Renunciar a pactos oscuros. Renuncia en voz alta a todo pacto con el enemigo.
+
+Tercero: Destruir objetos de brujería. Los objetos pueden ser portadores de maldición.
+
+Cuarto: Cortar todo contacto con la persona que te ató.
+
+Quinto: La sangre de Cristo. "La sangre de Jesucristo su Hijo nos limpia de todo pecado." Primera de Juan 1, versículo 7.
+
+Sexto: Llenar el vacío con la Palabra de Dios. No dejes tu corazón vacío después de la liberación.
+
+"Conoceréis la verdad, y la verdad os hará libres." Juan 8, versículo 32.
+
+Oración de Salvación y Liberación.
+
+Padre Celestial,
+Vengo a Ti reconociendo que soy un pecador y que necesito Tu perdón. Me arrepiento de todos mis pecados.
+Creo que Jesucristo es Tu Hijo, que murió en la cruz por mis pecados y resucitó.
+Te pido que me perdones y me limpies con la sangre de Jesús.
+Renuncio a todo pacto con el enemigo. Rompo toda atadura en el nombre de Jesús.
+Declaro que soy libre por la sangre de Cristo.
+Gracias por Tu amor y liberación.
+En el nombre de Jesús, Amén.
+
+"Porque todo aquel que invocare el nombre del Señor, será salvo." Romanos 10, versículo 13.
+
+Hoy es el día de salvación. No esperes más. Dios te está llamando ahora mismo.
+`;
+
+// AUDIO
+let synth = window.speechSynthesis;
+let utterance = null;
+let isPlaying = false;
+let isPaused = false;
+let progress = 0;
+let progressInterval = null;
+const TOTAL_DURATION = 180;
+
+function toggleAudio() {
+  const btn = document.getElementById('playBtn');
+  const status = document.getElementById('audioStatus');
+  
+  if (isPlaying && !isPaused) {
+    synth.pause();
+    isPaused = true;
+    btn.textContent = '▶ CONTINUAR';
+    status.textContent = 'Pausado';
+    clearInterval(progressInterval);
+  } else if (isPaused) {
+    synth.resume();
+    isPaused = false;
+    btn.textContent = '⏸ PAUSAR';
+    status.textContent = 'Reproduciendo...';
+    startProgress();
+  } else {
+    speak();
+  }
+}
+
+function speak() {
+  synth.cancel();
+  utterance = new SpeechSynthesisUtterance(NARRATION_TEXT);
+  const voices = synth.getVoices();
+  const spanishVoice = voices.find(v => v.lang.startsWith('es'));
+  if (spanishVoice) utterance.voice = spanishVoice;
+  utterance.lang = 'es-ES';
+  utterance.rate = 0.8;
+  utterance.pitch = 1;
+  utterance.volume = 1;
+  
+  utterance.onstart = function() {
+    isPlaying = true; isPaused = false;
+    document.getElementById('playBtn').textContent = '⏸ PAUSAR';
+    document.getElementById('audioStatus').textContent = 'Reproduciendo...';
+    startProgress();
+  };
+  
+  utterance.onend = function() {
+    isPlaying = false; isPaused = false;
+    document.getElementById('playBtn').textContent = '▶ REPRODUCIR';
+    document.getElementById('audioStatus').textContent = 'Finalizado';
+    document.getElementById('progress').style.width = '100%';
+    clearInterval(progressInterval);
+  };
+  
+  utterance.onerror = function() {
+    isPlaying = false;
+    document.getElementById('playBtn').textContent = '▶ REPRODUCIR';
+    document.getElementById('audioStatus').textContent = 'Error';
+    clearInterval(progressInterval);
+  };
+  
+  synth.speak(utterance);
+}
+
+function startProgress() {
+  progressInterval = setInterval(function() {
+    progress += 100 / (TOTAL_DURATION * 10);
+    if (progress >= 100) { progress = 100; clearInterval(progressInterval); }
+    document.getElementById('progress').style.width = progress + '%';
+  }, 100);
+}
+
+function seekAudio(e) {
+  const bar = e.currentTarget;
+  const rect = bar.getBoundingClientRect();
+  const percent = (e.clientX - rect.left) / rect.width;
+  document.getElementById('progress').style.width = (percent * 100) + '%';
+  progress = percent * 100;
+}
+
+if (synth.onvoiceschanged !== undefined) synth.onvoiceschanged = function() {};
+
+// MENÚ
+function toggleMenu() {
+  document.getElementById('nav-links').classList.toggle('active');
+}
+
+// PREGUNTAS
+function toggleQuestion(element) {
+  element.classList.toggle('open');
+}
+
+// ORACIÓN
+function prayed() {
+  const response = document.getElementById('prayer-response');
+  response.style.display = 'block';
+  response.scrollIntoView({behavior: 'smooth'});
+}
+
+// ACCESIBILIDAD
+let fontSize = 22;
+let darkMode = true;
+
+function toggleSize() {
+  fontSize += 4;
+  if (fontSize > 32) fontSize = 22;
+  document.documentElement.style.fontSize = fontSize + 'px';
+  localStorage.setItem('fontSize', fontSize);
+}
+
+function toggleContrast() {
+  darkMode = !darkMode;
+  if (darkMode) {
+    document.body.style.background = '#000';
+    document.body.style.color = '#FFF';
+  } else {
+    document.body.style.background = '#FFF';
+    document.body.style.color = '#000';
+  }
+  localStorage.setItem('darkMode', darkMode);
+}
+
+function resetStyles() {
+  fontSize = 22; darkMode = true;
+  document.documentElement.style.fontSize = '22px';
+  document.body.style.background = '#000';
+  document.body.style.color = '#FFF';
+  localStorage.removeItem('fontSize');
+  localStorage.setItem('darkMode', 'true');
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  const savedSize = localStorage.getItem('fontSize');
+  if (savedSize) {
+    fontSize = parseInt(savedSize);
+    document.documentElement.style.fontSize = fontSize + 'px';
+  }
+  const savedMode = localStorage.getItem('darkMode');
+  if (savedMode === 'false') {
+    darkMode = false;
+    document.body.style.background = '#FFF';
+    document.body.style.color = '#000';
+  }
+});
+
+// SCROLL
+document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+  link.addEventListener('click', function(e) {
+    const targetId = this.getAttribute('href');
+    if (targetId === '#') return;
+    const target = document.querySelector(targetId);
+    if (target) {
+      e.preventDefault();
+      window.scrollTo({top: target.getBoundingClientRect().top + window.pageYOffset - 120, behavior: 'smooth'});
+      document.getElementById('nav-links').classList.remove('active');
+    }
+  });
+});
+</script>
+</body>
+</html>
